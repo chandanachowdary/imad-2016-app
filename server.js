@@ -30,7 +30,7 @@ function createTemplate(data){
     var date=data.date;
     var heading=data.heading;
     var content=data.content;
-    var htmlTemplate= 
+    var htmlTemplate=
     <html>
       <head>
        <title>
@@ -62,10 +62,6 @@ function createTemplate(data){
 
 return htmltemplate;
 }
-
-   
-
-    
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
