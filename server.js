@@ -26,21 +26,19 @@ var articles={
 };
 
 function createTemplate(data){
-    var title=data.title;
-    var date=data.date;
-    var heading=data.heading;
-    var content=data.content;
-    var htmlTemplate=
-    <html>
-      <head>
-       <title>
-           ${title}
-           
-       </title> 
-       <link href="/ui/style.css" rel="stylesheet" />
-       
-      </head>
-    <body>
+var title=data.title;
+var date=data.date;
+var heading=data.heading;
+var content=data.content;
+var htmlTemplate=
+<html>
+ <head>
+  <title>
+      ${title}
+    </title> 
+         <link href="/ui/style.css" rel="stylesheet" />
+  </head>
+      <body>
         <div class=container>
         <div>
         <a href='/'>Home</a>
@@ -57,10 +55,10 @@ function createTemplate(data){
         </div>
         
       </body>
-    </html>
-    ;
+</html>
+   ;
 
-return htmltemplate;
+return htmlTemplate;
 }
 
 app.get('/', function (req, res) {
