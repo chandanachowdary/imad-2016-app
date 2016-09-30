@@ -22,23 +22,24 @@ var articles={
     heading:'Article Three',
     date:'sep 22 2016',
     content: '<p>This is my  third article</p>'
+}
 };
+
 function createTemplate(data){
     var title=data.title;
     var date=data.date;
     var heading=data.heading;
     var content=data.content;
-
-var html Template= {
+    var htmlTemplate= 
     <html>
-    <head>
+      <head>
        <title>
            ${title}
            
-      </title> 
+       </title> 
        <link href="/ui/style.css" rel="stylesheet" />
        
-    </head>
+      </head>
     <body>
         <div class=container>
         <div>
@@ -55,10 +56,15 @@ var html Template= {
         </div>
         </div>
         
-    </body>
-</html>
-return html Template;
+      </body>
+    </html>
+    ;
+
+return htmltemplate;
 }
+
+   
+
     
 
 app.get('/', function (req, res) {
@@ -67,7 +73,9 @@ app.get('/', function (req, res) {
 
 
 app.get('/:articleName', function (req, res) {
-   res.send(createTemplate(articles[articlename]);
+    var articleName=req.params.articleName;
+    
+   res.send(createTemplate(articles[articlename]));
 });
 
 
