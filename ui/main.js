@@ -6,9 +6,9 @@ element.innerHTML='new value';
 var img=document.getElementById('madi');
 var marginLeft=0;
 function moveRight(){
-    marginLefft=marginLeft+2;
+    marginLefft=marginLeft+1;
     img.style.marginleft=marginLeft+'px';
 }
 img.onClick=function(){
-    var interval=setInterval(moveRight,10);
+    var interval=setInterval(moveRight,50);
 };
